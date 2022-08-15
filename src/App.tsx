@@ -1,11 +1,22 @@
-import React from 'react';
-import { Button } from '@mui/material'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { publicRoutes } from './routers'
 
 function App() {
   return (
-    <div className="App">
-      <Button variant='contained'>Hi</Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {publicRoutes.map((route, index) =>
+          <Route
+            key={index}
+            path={route.path}
+            element={
+              <route.component />
+            }
+          />
+        )
+        }
+      </Routes>
+    </BrowserRouter>
   );
 }
 
