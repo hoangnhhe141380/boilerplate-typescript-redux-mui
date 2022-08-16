@@ -3,7 +3,8 @@ import routes from '../config/routes';
 
 //Pages
 import Home from '../pages/Home';
-import MovieDetail from '../pages/MovieDetail';
+import PokemonDetail from '../pages/PokemonDetail';
+import Type from '../pages/Type';
 import PageNotFound from '../pages/PageNotFound';
 
 interface RoutesItemProps {
@@ -15,7 +16,8 @@ type RoutesProps = RoutesItemProps[]
 
 const publicRoutes: RoutesProps = [
     { path: routes.home, component: Home },
-    { path: routes.movie, component: MovieDetail },
+    { path: routes.type, component: Type },
+    { path: routes.pokemon, component: PokemonDetail },
     { path: routes[404], component: PageNotFound },
 ];
 

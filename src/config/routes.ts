@@ -1,6 +1,7 @@
 const routes = {
     home: '/',
-    movie: '/movie/:imdbID',
+    type: '/type',
+    pokemon: '/pokemon/:id',
     404: '/404'
 };
 
